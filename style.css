@@ -1,0 +1,82 @@
+:root {
+    --primary-gold: #D4AF37;
+    --deep-blue: #0A192F;
+    --light-bg: #F8FAFC;
+    --card-bg: #ffffff;
+    --text-main: #0A192F;
+    --transition: all 0.3s ease;
+}
+
+body.dark-mode {
+    --light-bg: #050C16;
+    --card-bg: #0D1B2A;
+    --text-main: #F8FAFC;
+    background-color: var(--light-bg);
+    color: var(--text-main);
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-main);
+    transition: var(--transition);
+}
+
+/* Navbar */
+.navbar {
+    background: var(--card-bg);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.text-gold { color: var(--primary-gold); font-weight: 800; }
+
+/* Hero & Search */
+.hero { padding: 80px 0; text-align: center; }
+.badge-cup { background: var(--primary-gold); color: #000; padding: 10px 20px; border-radius: 50px; }
+
+.search-container { max-width: 600px; margin: 30px auto; position: relative; }
+.search-input {
+    width: 100%;
+    padding: 18px 25px 18px 55px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.search-icon { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: #999; font-size: 1.2rem; }
+
+/* Cards */
+.category-card {
+    background: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 24px;
+    height: 100%;
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.05);
+    position: relative;
+}
+.category-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--primary-gold);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Accordion Custom */
+.accordion-item { background: var(--card-bg); color: var(--text-main); border: none; }
+.accordion-button { background: var(--card-bg); color: var(--text-main); font-weight: 600; }
+.accordion-button:not(.collapsed) { background: rgba(212, 175, 55, 0.1); color: var(--primary-gold); }
+
+/* Acc Panel */
+.acc-panel { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 10px; z-index: 1000; }
+.btn-acc {
+    width: 50px; height: 50px; border-radius: 50%; border: none;
+    background: var(--deep-blue); color: white; box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+body.dark-mode .btn-acc { background: var(--primary-gold); color: #000; }
